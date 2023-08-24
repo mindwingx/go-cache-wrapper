@@ -26,7 +26,7 @@ type (
 	}
 )
 
-func NewRedis(registry abstraction.Registry, locale abstraction.Locale) abstraction.Cache {
+func New(registry abstraction.Registry, locale abstraction.Locale) abstraction.Cache {
 	caching := new(redis)
 	err := registry.Parse(&caching.config)
 	if err != nil {
